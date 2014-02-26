@@ -17,7 +17,12 @@ public class CreateEvent extends Activity {
 
 	Button submit;
 	EditText title,descr,date,tags;
-	String uri;
+	String uri= "http://sankalp.host56.com/create_events.php";
+	private static String TAG_TITLE = "title";
+	private static String TAG_DESCR = "description";
+	private static String TAG_DATE = "date";
+	private static String TAG_TAGS = "tags";
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -34,10 +39,10 @@ public class CreateEvent extends Activity {
 			public void onClick(View v) {
 				
 				List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
-					  nameValuePairs.add(new BasicNameValuePair("title", title.getText().toString()));
-					  nameValuePairs.add(new BasicNameValuePair("description", descr.getText().toString()));
-					  nameValuePairs.add(new BasicNameValuePair("date", date.getText().toString()));
-					  nameValuePairs.add(new BasicNameValuePair("tags", tags.getText().toString()));
+					  nameValuePairs.add(new BasicNameValuePair(TAG_TITLE, title.getText().toString()));
+					  nameValuePairs.add(new BasicNameValuePair(TAG_DESCR, descr.getText().toString()));
+					  nameValuePairs.add(new BasicNameValuePair(TAG_DATE, date.getText().toString()));
+					  nameValuePairs.add(new BasicNameValuePair(TAG_TAGS, tags.getText().toString()));
 				InternetData id= new InternetData();
 
 				id.postData(uri, nameValuePairs);
