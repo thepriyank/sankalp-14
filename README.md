@@ -1,4 +1,4 @@
-justsay
+Sankalp
 =======
 
-A blogging platform on android
+Android Application for Sankalp-2014, Social Fest of IIT Roorkee.
