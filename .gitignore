@@ -20,6 +20,7 @@
 **/local.properties
 
 ##Eclipse
+**/*.properties
 **/*.pydevproject
 **/*.project
 **/*.metadata
