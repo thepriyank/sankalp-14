@@ -1,0 +1,12 @@
+CREATE TABLE  `a2093817_events`.`events` (
+`event_id` INT( 30 ) NOT NULL AUTO_INCREMENT ,
+`title` VARCHAR( 30 ) NOT NULL ,
+`description` TEXT NOT NULL ,
+`timestamp` DATETIME NOT NULL ,
+`tags` TEXT NOT NULL ,
+`likes` INT( 30 ) NOT NULL ,
+PRIMARY KEY (  `event_id` ) ,
+UNIQUE (
+`event_id`
+)
+) ENGINE = MYISAM COMMENT =  'This table contains all blogposts.'
